@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staffnest Solutions | Hospitality Recruitment & Placement</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Ensures smooth scrolling animation when navigation link anchors are clicked */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo-container">
+            <svg class="luxury-logo-icon" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 35H80L65 75H35L20 35Z" stroke="url(#goldGradient)" stroke-width="3" stroke-linejoin="round" opacity="0.4"/>
+                <path d="M30 35C30 25, 45 20, 50 20C65 20, 70 30, 70 40C70 55, 30 50, 30 65C30 75, 40 80, 50 80C65 80, 70 70, 70 65" stroke="url(#goldGradient)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="50" y1="32" x2="50" y2="42" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <line x1="50" y1="58" x2="50" y2="68" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FFEFA6" />
+                        <stop offset="50%" stop-color="#E5C158" />
+                        <stop offset="100%" stop-color="#A98621" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <h1>Staffnest Solutions</h1>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#employer-registration">Employer Portal</a></li>
+                <li><a href="#candidate-registration">Candidate Portal</a></li>
+                <li><a href="#main-footer">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="hero-content">
+                <h2>Transforming Hospitality Recruitment</h2>
+                <p>We connect passionate job seekers with world-class hotels, luxury resorts, restaurants, and cafes.</p>
+                <div class="cta-buttons">
+                    <a href="#candidate-registration" class="btn">Find a Job</a>
+                    <a href="#employer-registration" class="btn">Hire Staff</a>
+                </div>
+                
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80" alt="Luxury Hospitality Excellence" class="premium-hero-img">
+                </div>
+            </div>
+
+            <div class="features-container">
+                <div class="feature-block">
+                    <h3>For Candidates</h3>
+                    <ul>
+                        <li><strong>Exclusive Openings:</strong> Access verified vacancies from top domestic and international hotel groups.</li>
+                        <li><strong>Diverse Roles:</strong> Find positions across all career levels, from fresh graduates to senior general managers.</li>
+                        <li><strong>Proactive Alerts:</strong> Receive instant notifications about newly posted jobs tailored to your specific profile.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-block">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><strong>Targeted Pool:</strong> Connect instantly with qualified, experienced, and pre-screened hospitality professionals.</li>
+                        <li><strong>Streamlined Hiring:</strong> Post open positions effortlessly and track applicants using our intelligent candidate matching system.</li>
+                        <li><strong>Global Outreach:</strong> Source talent locally or recruit skilled staff from abroad for international placements.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <div class="about-header-main">
+                <h2>About Us</h2>
+                <p class="about-subtitle">Exclusively dedicated to elevating hospitality recruitment metrics.</p>
+            </div>
+
+            <div class="about-image-container">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Premium Culinary Service" class="premium-about-img">
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <span class="card-number">01</span>
+                    <h3>Who We Are</h3>
+                    <p>We are a dedicated team of hospitality professionals and recruitment experts. We understand that a hotel's success relies entirely on its people. Unlike generic job boards, we focus exclusively on the hospitality sector. Our team provides tailored solutions across all core operational divisions.</p>
+                </div>
+
+                <div class="about-card">
+                    <span class="card-number">02</span>
+                    <h3>Our Mission</h3>
+                    <p>To fundamentally transform hospitality recruitment. We seamlessly connect passionate job seekers with world-class hotels, luxury resorts, restaurants, and cafes. Our workflow ensures hiring remains highly efficient, transparent, and seamless for properties globally and locally.</p>
+                </div>
+
+                <div class="about-card">
+                    <span class="card-number">03</span>
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted digital companion for hospitality careers. We are actively fostering an elite professional community where top talent thrives and premier hotel groups find the exact experts they need to deliver unforgettable guest experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="employer-registration">
+            <h2>Employer Registration & Staff Requirements</h2>
+            <p>Submit your vacancy requirements details through our secure database handler.</p>
+            
+            <form action="#" method="POST" id="employer-form">
+                <fieldset>
+                    <legend>Company Information</legend>
+                    <label for="emp-org-name">Establishment / Property Name:</label>
+                    <input type="text" id="emp-org-name" name="employer_organization_name" required>
+
+                    <label for="emp-contact-name">Contact Person Name:</label>
+                    <input type="text" id="emp-contact-name" name="employer_contact_name" required>
+
+                    <label for="emp-email">Official Email Address:</label>
+                    <input type="email" id="emp-email" name="employer_email" required>
+
+                    <label for="emp-phone">Contact Number:</label>
+                    <input type="tel" id="emp-phone" name="employer_phone" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Staff Shortage Requirements</legend>
+                    <p>Click on a department to expand and enter the number of required positions needed:</p>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>1. Management & Administration</h3>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <label for="req-gm">General Manager:</label>
+                            <input type="number" id="req-gm" name="req_general_manager" min="0" value="0">
+                            <label for="req-om">Operation Manager:</label>
+                            <input type="number" id="req-om" name="req_operation_manager" min="0" value="0">
+                            <label for="req-hrm">HR. Manager / Executive:</label>
+                            <input type="number" id="req-hrm" name="req_hr_manager" min="0" value="0">
+                            <label for="req-hra">HR. Associates:</label>
+                            <input type="number" id="req-hra" name="req_hr_associates" min="0" value="0">
+                            <label for="req-fin-mgr">Finance Manager / Controller:</label>
+                            <input type="number" id="req-fin-mgr" name="req_finance_manager" min="0" value="0">
+                            <label for="req-acc-mgr">Accounts Manager / Executive:</label>
+                            <input type="number" id="req-acc-mgr" name="req_accounts_manager" min="0" value="0">
+                            <label for="req-cashier">Cashier:</label>
+                            <input type="number" id="req-cashier" name="req_cashier" min="0" value="0">
+                            <label for="req-itm">IT Manager / Executive:</label>
+                            <input type="number" id="req-itm" name="req_it_manager" min="0" value="0">
+                            <label for="req-store-mgr">Store Manager:</label>
+                            <input type="number" id="req-store-mgr" name="req_store_manager" min="0" value="0">
+                            <label for="req-store-asst">Store Assistants:</label>
+                            <input type="number" id="req-store-asst" name="req_store_assistants" min="0" value="0">
+                            <label for="req-sales-mgr">Sales / Marketing Manager:</label>
+                            <input type="number" id="req-sales-mgr" name="req_sales_manager" min="0" value="0">
+                            <label for="req-sales-exec">Sales & Marketing Executive:</label>
+                            <input type="number" id="req-sales-exec" name="req_sales_executive" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>2. Front Office & Guest Relations</h3>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <label for="req-fom">Front Office Manager:</label>
+                            <input type="number" id="req-fom" name="req_front_office_manager" min="0" value="0">
+                            <label for="req-res-mgr">Reservation Manager / Executive:</label>
+                            <input type="number" id="req-res-mgr" name="req_reservation_manager" min="0" value="0">
+                            <label for="req-gre">Guest Relation Executive:</label>
+                            <input type="number" id="req-gre" name="req_guest_relation_executive" min="0" value="0">
+                            <label for="req-foa">F.O.A (Front Office Associate):</label>
+                            <input type="number" id="req-foa" name="req_foa" min="0" value="0">
+                            <label for="req-banq-mgr">Banquet Manager:</label>
+                            <input type="number" id="req-banq-mgr" name="req_banquet_manager" min="0" value="0">
+                            <label for="req-banq-exec">Banquet Executive:</label>
+                            <input type="number" id="req-banq-exec" name="req_banquet_executive" min="0" value="0">
+                            <label for="req-banq-asst">Banquet Associates:</label>
+                            <input type="number" id="req-banq-asst" name="req_banquet_associates" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>3. Culinary / Kitchen (Food Production)</h3>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <label for="req-exec-chef">Exec. Chef:</label>
+                            <input type="number" id="req-exec-chef" name="req_exec_chef" min="0" value="0">
+                            <label for="req-chef">Chef:</label>
+                            <input type="number" id="req-chef" name="req_chef" min="0" value="0">
+                            <label for="req-cdp-ind">CDP - Indian:</label>
+                            <input type="number" id="req-cdp-ind" name="req_cdp_indian" min="0" value="0">
+                            <label for="req-cdp-chi">CDP - Chinese:</label>
+                            <input type="number" id="req-cdp-chi" name="req_cdp_chinese" min="0" value="0">
+                            <label for="req-cdp-tan">CDP - Tandoor:</label>
+                            <input type="number" id="req-cdp-tan" name="req_cdp_tandoor" min="0" value="0">
+                            <label for="req-cdp-cont">CDP - Continental:</label>
+                            <input type="number" id="req-cdp-cont" name="req_cdp_continental" min="0" value="0">
+                            <label for="req-cdp-beng">CDP - Bengali:</label>
+                            <input type="number" id="req-cdp-beng" name="req_cdp_bengali" min="0" value="0">
+                            <label for="req-cdp-oth">CDP - Others:</label>
+                            <input type="number" id="req-cdp-oth" name="req_cdp_others" min="0" value="0">
+                            <label for="req-commi1">Commi 1:</label>
+                            <input type="number" id="req-commi1" name="req_commi_1" min="0" value="0">
+                            <label for="req-commi2">Commi 2:</label>
+                            <input type="number" id="req-commi2" name="req_commi_2" min="0" value="0">
+                            <label for="req-commi3">Commi 3:</label>
+                            <input type="number" id="req-commi3" name="req_commi_3" min="0" value="0">
+                            <label for="req-pantry">Pantry Chef:</label>
+                            <input type="number" id="req-pantry" name="req_pantry_chef" min="0" value="0">
+                            <label for="req-bakery">Bakery Chef:</label>
+                            <input type="number" id="req-bakery" name="req_bakery_chef" min="0" value="0">
+                            <label for="req-kit-sup">Kitchen Supervisor:</label>
+                            <input type="number" id="req-kit-sup" name="req_kitchen_supervisor" min="0" value="0">
+                            <label for="req-kst-sup">KST Supervisor:</label>
+                            <input type="number" id="req-kst-sup" name="req_kst_supervisor" min="0" value="0">
+                            <label for="req-kst">KST Asset / Staff:</label>
+                            <input type="number" id="req-kst" name="req_kst" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>4. Food & Beverage Service</h3>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <label for="req-fbm">F&B Manager:</label>
+                            <input type="number" id="req-fbm" name="req_fb_manager" min="0" value="0">
+                            <label for="req-fbc">F&B Controller:</label>
+                            <input type="number" id="req-fbc" name="req_fb_controller" min="0" value="0">
+                            <label for="req-rest-mgr">Rest. Manager:</label>
+                            <input type="number" id="req-rest-mgr" name="req_restaurant_manager" min="0" value="0">
+                            <label for="req-bar-mgr">Bar Manager:</label>
+                            <input type="number" id="req-bar-mgr" name="req_bar_manager" min="0" value="0">
+                            <label for="req-cafe-mgr">Cafe Manager:</label>
+                            <input type="number" id="req-cafe-mgr" name="req_cafe_manager" min="0" value="0">
+                            <label for="req-bartender">Bar Tender:</label>
+                            <input type="number" id="req-bartender" name="req_bartender" min="0" value="0">
+                            <label for="req-captain">Sr. Steward / Captain:</label>
+                            <input type="number" id="req-captain" name="req_senior_steward_captain" min="0" value="0">
+                            <label for="req-steward">Steward:</label>
+                            <input type="number" id="req-steward" name="req_steward" min="0" value="0">
+                            <label for="req-fba">F&B Associate:</label>
+                            <input type="number" id="req-fba" name="req_fb_associate" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>5. Housekeeping, Security & Utility</h3>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="accordion-content">
+                            <label for="req-ex-hk">Executive Housekeeper:</label>
+                            <input type="number" id="req-ex-hk" name="req_executive_housekeeper" min="0" value="0">
+                            <label for="req-hk-sup">HK Supervisor:</label>
+                            <input type="number" id="req-hk-sup" name="req_hk_supervisor" min="0" value="0">
+                            <label for="req-floor-sup">Floor Supervisor:</label>
+                            <input type="number" id="req-floor-sup" name="req_floor_supervisor" min="0" value="0">
+                            <label for="req-laundry">Laundry Manager / Executive:</label>
+                            <input type="number" id="req-laundry" name="req_laundry_manager" min="0" value="0">
+                            <label for="req-hka">HKA (Housekeeping Associate):</label>
+                            <input type="number" id="req-hka" name="req_hka" min="0" value="0">
+                            <label for="req-sec-inch">Security Incharge:</label>
+                            <input type="number" id="req-sec-inch" name="req_security_incharge" min="0" value="0">
+                            <label for="req-sec-pers">Security Personnel:</label>
+                            <input type="number" id="req-sec-pers" name="req_security_personnel" min="0" value="0">
+                            <label for="req-spa-inch">Spa / Gym Incharge:</label>
+                            <input type="number" id="req-spa-inch" name="req_spa_gym_incharge" min="0" value="0">
+                            <label for="req-driver">Drivers:</label>
+                            <input type="number" id="req-driver" name="req_driver" min="0" value="0">
+                            <label for="req-spa-att">Spa Attendants:</label>
+                            <input type="number" id="req-spa-att" name="req_spa_attendants" min="0" value="0">
+                            <label for="req-gym-train">Gym Trainer:</label>
+                            <input type="number" id="req-gym-train" name="req_gym_trainer" min="0" value="0">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="terms-scroll" style="height: 150px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;">
+                    <p>1. Employers may submit their vacancy requirements in detail through the company website or via email in the prescribed format.</p>
+                    <p>2. Employers shall provide reasonable time to the company for sourcing, screening, and shortlisting suitable hospitality candidates from the database.</p>
+                    <p>3. After primary screening, the company shall forward shortlisted candidate resumes and profiles to the employer for further evaluation.</p>
+                    <p>4. Employers may conduct interviews at their office premises or through online/offline modes as mutually agreed.</p>
+                    <p><strong>5. Recruitment Assistance Fee:</strong> The Employer strictly agrees and is obligated to pay a specified recruitment assistance fee to the Agency (Staffnest Solutions) upon the successful selection and placement of any referred candidate.</p>
+                    <p><strong>6. Fee Deduction & Remittance:</strong> As part of the mutually agreed framework, the agreed service charge shall be systematically deducted by the employer from the candidate's first-month salary and remitted directly to Staffnest Solutions within the stipulated billing cycle.</p>
+                    <p>7. An explicit operational agreement or Memorandum of Understanding (MOU) detailing the exact commercial fee structure must be executed between the company and the employer prior to scheduling live interviews or finalizing recruitment activities.</p>
+                    <p>8. Employers shall ensure total compliance with all applicable labour laws, statutory wage obligations, and workplace safety regulations concerning the employed candidates.</p>
+                    <p>9. The company acts strictly as a recruitment facilitator and shall not be held liable or responsible for any employment disputes, termination issues, or performance variances arising post-hire.</p>
+                    <p><strong>10. Legal Jurisdiction:</strong> Any unsettled operational disputes, collection delays, or legal escalations are subject explicitly to the exclusive legal jurisdiction of the courts under the <strong>Siliguri Jurisdiction only</strong>.</p>
+                </div>
+
+                <label id="checkbox-label">
+                    <input type="checkbox" name="employer_terms_accept" required> I accept all the Employer Obligations and Registration Terms.
+                </label>
+
+                <button type="submit" class="submit-btn">Submit Staff Requirements</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="candidate-registration">
+            <h2>Candidate Application Form</h2>
+            <p>Register with us for free placement services across premium hospitality brands.</p>
+
+            <form action="#" method="POST" enctype="multipart/form-data" id="candidate-form">
+                <fieldset>
+                    <legend>Personal & Professional Details</legend>
+                    <label for="cand-name">Full Name:</label>
+                    <input type="text" id="cand-name" name="candidate_name" required>
+
+                    <label for="cand-email">Email Address:</label>
+                    <input type="email" id="cand-email" name="candidate_email" required>
+
+                    <label for="cand-phone">Mobile Number:</label>
+                    <input type="tel" id="cand-phone" name="candidate_phone" required>
+
+                    <label for="cand-position">Preferred Functional Position:</label>
+                    <select id="cand-position" name="candidate_preferred_position" required>
+                        <option value="">-- Select Target Hospitality Role --</option>
+                        <optgroup label="Management & Corporate">
+                            <option value="General Manager">General Manager</option>
+                            <option value="Operation Manager">Operation Manager</option>
+                            <option value="HR Manager">HR Manager / Executive</option>
+                            <option value="Finance Manager">Finance Manager</option>
+                            <option value="Sales Marketing Manager">Sales / Marketing Manager</option>
+                        </optgroup>
+                        <optgroup label="Front Office & Guest Services">
+                            <option value="Front Office Manager">Front Office Manager</option>
+                            <option value="Reservation Executive">Reservation Executive</option>
+                            <option value="Guest Relation Executive">Guest Relation Executive</option>
+                            <option value="Front Office Associate">F.O.A</option>
+                            <option value="Banquet Manager">Banquet Manager</option>
+                        </optgroup>
+                        <optgroup label="Culinary (Kitchen Operations)">
+                            <option value="Executive Chef">Executive Chef</option>
+                            <option value="Chef">Chef</option>
+                            <option value="CDP">Chef De Partie (CDP)</option>
+                            <option value="Commi Staff">Commi 1 / 2 / 3</option>
+                            <option value="Pantry Chef">Pantry Chef</option>
+                            <option value="Bakery Chef">Bakery Chef</option>
+                        </optgroup>
+                        <optgroup label="Food & Beverage Service">
+                            <option value="FandB Manager">F&B Manager</option>
+                            <option value="Restaurant Manager">Restaurant Manager</option>
+                            <option value="Bar Manager">Bar Manager</option>
+                            <option value="Bartender">Bartender</option>
+                            <option value="Captain">Sr. Steward / Captain</option>
+                            <option value="Steward">Steward</option>
+                        </optgroup>
+                        <optgroup label="Housekeeping & Support">
+                            <option value="Executive Housekeeper">Executive Housekeeper</option>
+                            <option value="Housekeeping Supervisor">Housekeeping Supervisor</option>
+                            <option value="Housekeeping Associate">HKA</option>
+                            <option value="Security Personnel">Security Personnel</option>
+                            <option value="Gym Trainer">Gym / Spa Staff</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="cand-exp">Total Years of Experience:</label>
+                    <input type="number" id="cand-exp" name="candidate_experience_years" min="0" placeholder="0 for fresher" required>
+
+                    <label for="cand-photo">Recent Passport Photograph Upload:</label>
+                    <input type="file" id="cand-photo" name="candidate_photo" accept="image/*" required>
+
+                    <label for="cand-cv">Upload Resume / CV (PDF or DOCX format):</label>
+                    <input type="file" id="cand-cv" name="candidate_cv" accept=".pdf,.docx,.doc" required>
+                </fieldset>
+
+                <div class="terms-box">
+                    <h3>Candidate Terms & Conditions</h3>
+                    <div class="terms-scroll" style="height: 150px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px;">
+                        <p><strong>1. Scope of Services</strong></p>
+                        <p>• Free Registration: Staffnest Solutions provides comprehensive recruitment and placement assistance to Candidates with free registration upfront.</p>
+                        <p>• No Guarantee: The Agency does not guarantee definite employment, guaranteed interviews, or final placement within any explicit timeframe.</p>
+                        <p>• Matching Rights: The Agency reserves the sole right to filter and determine which job profiles accurately match the Candidate's background skills.</p>
+                        <p>• Training: Fresher candidates may be provided with basic hospitality training completely free of cost to boost interface skills and baseline employability.</p>
+                        
+                        <p><strong>2. Candidate Obligations</strong></p>
+                        <p>• Accurate Information: The Candidate must provide true, complete, and updated statements regarding qualifications, experience data, and background history.</p>
+                        <p>• Verification: The Agency or hiring employers may perform deep background checks, reference checks, or educational credential verification at any stage.</p>
+                        <p>• Attendance: The Candidate must attend scheduled interviews punctually and contact the Agency immediately if an emergency cancellation arises.</p>
+                        
+                        <p><strong>3. Interview and Selection Process</strong></p>
+                        <p>• Direct Communication: Candidates must not make unprompted direct contact with prospective corporate employers unless explicitly authorized by us.</p>
+                        <p>• Feedback Loop: The Candidate agrees to provide prompt post-interview feedback to the Agency immediately after completion.</p>
+                        <p>• Offers Tracker: The Candidate must inform the Agency immediately upon receiving an official job offer from an employer we referred.</p>
+                        
+                        <p><strong>4. Confidentiality & Data Privacy</strong></p>
+                        <p>• Non-Disclosure: Information regarding employers, open placement specs, and internal interview patterns must be held in strict confidence.</p>
+                        <p>• Data Handling: The Agency manages personal information safely according to standard rules and forwards profiles only to targeted employers.</p>
+                        
+                        <p><strong>5. Liability & Financial Commitments</strong></p>
+                        <p>• Operational Disclaimers: Staffnest Solutions is not responsible for physical contract breaches, internal salary disputes, or disciplinary actions handling post-hire.</p>
+                        <p>• Service Fee: Placement assistance is completely free initially. However, the candidate agrees that a one-time specified placement service fee will be automatically deducted from their first month's salary by the employer and remitted directly to the Agency.</p>
+                        <p>• Enforcement: In cases of intentional evasion or non-payment of the agreed remittance fee, Staffnest Solutions will pursue formal legal recovery operations under the exclusive jurisdiction of the Siliguri courts only.</p>
+                    </div>
+                    <label id="checkbox-candidate-label">
+                        <input type="checkbox" name="candidate_terms_accept" required> I accept all the Candidate Obligations and Placement Terms.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Register Profile</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Staffnest Solutions. All Rights Reserved. Subject to Siliguri Jurisdiction.</p>
+            <address class="footer-address">
+                "Softech House", 3rd Floor, College Para, Siliguri-734001, Ph: 9002255905 (M)
+            </address>
+            <div class="developer-signature">
+                Designed and developed by <span class="dev-brand">SG Solns</span> &bull; 
+                <a href="mailto:swayamgh05@gmail.com" class="dev-link">swayamgh05@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
